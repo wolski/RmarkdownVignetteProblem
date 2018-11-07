@@ -19,11 +19,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ```{r cars, include=FALSE}
-child_docs <- "SomeChild.Rmd"
+child_docs <- "SomeChild.Rmd_t"
 if(params$empty){
-  child_docs <- "SomeChild_Empty.Rmd"
+  child_docs <- "SomeChild_Empty.Rmd_t"
 }
-child_docs <- system.file("ParametrizedReportsChild",child_docs,package = "RmarkdownVignetteProblem")
 
 ```
 
