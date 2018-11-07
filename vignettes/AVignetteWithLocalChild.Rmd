@@ -1,0 +1,33 @@
+---
+title: "Untitled"
+author: "Witold Wolski"
+date: "7 November 2018"
+output: html_document
+params:
+  empty: TRUE
+vignette: >
+  %\VignetteIndexEntry{Empty child}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+
+```{r cars, include=FALSE}
+child_docs <- "NoBuildVignette.Rmd_tmp"
+
+```
+
+
+```{r includChild, child = child_docs}
+
+```
+
+```{r}
+print("THE END")
+```
