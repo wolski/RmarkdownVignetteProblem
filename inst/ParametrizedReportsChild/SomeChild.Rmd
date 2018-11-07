@@ -1,0 +1,14 @@
+---
+title: "Hello World"
+author: "Witold Wolski"
+date: "7 November 2018"
+output: html_document
+---
+
+
+## R Markdown
+
+```{r helloworld}
+print("hell world")
+```
+

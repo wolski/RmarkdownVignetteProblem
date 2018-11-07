@@ -1,0 +1,36 @@
+---
+title: "Untitled"
+author: "Witold Wolski"
+date: "7 November 2018"
+output: html_document
+params:
+  empty: FALSE
+vignette: >
+  %\VignetteIndexEntry{Hello World}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+
+```{r cars, include=FALSE}
+child_docs <- "SomeChild.Rmd"
+if(params$empty){
+  child_docs <- "SomeChild_Empty.Rmd"
+}
+child_docs <- system.file("ParametrizedReportsChild",child_docs,package = "RmarkdownVignetteProblem")
+
+```
+
+
+```{r includChild, child = child_docs}
+```
+
+```{r}
+print("THE END")
+```
